@@ -1,0 +1,376 @@
+/* 컬러 변수 */
+:root {
+  --black: #14151a;
+  --gray-dark: #888790;
+  --gray-medium: #a2a2ac;
+  --gray-light: #dddcdf;
+  --white-dark: #79747e;
+  --white-medium: #a4a1aa;
+  --white-light: #fafafb;
+  --blue: #3e45ec;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background-color: var(--white-light);
+  color: var(--black);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--black);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 32px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
+.create-button {
+  background-color: var(--blue);
+  color: var(--white-light);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.create-button:hover {
+  background-color: #3338cc;
+}
+
+/* Search */
+.search-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 48px;
+  border: 1px solid var(--gray-light);
+  border-radius: 9999px;
+  font-size: 16px;
+  background-color: var(--white-light);
+  color: var(--black);
+}
+
+.search-input::placeholder {
+  color: var(--gray-medium);
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-medium);
+}
+
+/* Shop Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .shop-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Shop Item */
+.shop-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--gray-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shop-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shop-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.shop-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-light);
+}
+
+.cube-icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--gray-light);
+}
+
+.shop-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-name {
+  font-weight: 500;
+  color: var(--black);
+}
+
+.shop-username {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+
+.shop-likes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.heart-icon {
+  color: #e53e3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-image {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.likes-count {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+
+.product-count {
+  margin-bottom: 12px;
+}
+
+.product-count p {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 8px;
+}
+
+.product-thumbnail {
+  width: 80px;
+  height: 80px;
+  background-color: var(--white-light);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--gray-light);
+}
+
+.product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Create Form */
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-light);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.add-link {
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.form-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-item {
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 24px;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--black);
+}
+
+.product-description {
+  font-size: 14px;
+  color: var(--gray-medium);
+}
+
+.file-button {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.file-button:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.product-field {
+  margin-bottom: 16px;
+}
+
+.shopping-section,
+.password-section {
+  padding-top: 24px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #3338cc;
+}
+
+/* 비활성 버튼에 대한 추가 스타일 */
+.submit-button[disabled],
+.submit-button.disabled {
+  background-color: var(--gray-medium);
+  cursor: not-allowed;
+}
+
+.submit-button[disabled]:hover,
+.submit-button.disabled:hover {
+  background-color: var(--gray-medium);
+}
+
+/* 입력 필드 스타일 */
+.product-input,
+.password-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--gray-light);
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 8px;
+  background-color: var(--white-light);
+  color: var(--black);
+  transition: border-color 0.3s;
+}
+
+.product-input:focus,
+.password-input:focus {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.product-input::placeholder,
+.password-input::placeholder {
+  color: var(--gray-medium);
+}
+
+.password-input {
+  margin-top: 12px;
+}
+
+/* 로딩, 에러, 빈 상태 메시지 */
+.loading-message,
+.error-message,
+.empty-message {
+  text-align: center;
+  padding: 48px 0;
+  font-size: 18px;
+  color: var(--gray-dark);
+}
+
+.error-message {
+  color: #e53e3e;
+}
+
+.empty-message {
+  color: var(--gray-medium);
+}
