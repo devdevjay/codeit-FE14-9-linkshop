@@ -16,7 +16,7 @@ function List() {
       try {
         console.log("API 요청 시작...");
         const response = await fetch(
-          "https://linkshop-api.vercel.app/14-4/linkshops"
+          "https://linkshop-api.vercel.app/9908/linkshops"
         );
         if (!response.ok) {
           throw new Error("데이터를 불러오는 데 실패했습니다.");
